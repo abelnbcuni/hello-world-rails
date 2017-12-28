@@ -1,0 +1,42 @@
+<div class="mysql-index-site">
+    
+    <div class="mysql-index-title-row">
+        <h1>Visitor Log</h1>
+        <%= image_tag "Mysql_Logo.png" %>
+    </div>
+
+    <div class="mysql-index-intro-row">
+        <p class='mysql-para'>MySQL is an Database that is offered as a built in service to the PCF platform</p>
+        <p class='mysql-para'>
+            For More Information About MySQL In General Please Refer To: <a href='https://dev.mysql.com/doc/'>https://dev.mysql.com/doc/</a>
+        </p>
+        <p class='mysql-para'>This Page Displays The Visits Stored In The DB</p>
+    </div>
+        <table class ="table-row" id='visit-table'>
+            <thead>
+                <tr>
+                    <th>Visitor ID</th>
+                    <th>Visitor Name</th>
+                    <th>Visitor SSO</th>
+                    <th>Date Of Visit</th>
+                    <th>Visitor Log Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @visits.each do |visit| %>
+                    <tr>
+                        <td><%= visit.id %></td>
+                        <td><%= visit.name %></td>
+                        <td><%= visit.sso %></td>
+                        <td><%= visit.visit_date %></td>
+                        <td><%= visit.message %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#visit-table').DataTable();
+    } );
+</script>

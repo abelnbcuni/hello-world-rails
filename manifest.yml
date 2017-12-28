@@ -1,0 +1,9 @@
+---
+applications:
+- name: hello-world-rails
+  memory: 256M
+  instances: 2
+  path: .
+  command: rake db:migrate && rails s -p $PORT
+  services:
+    - rails-mysql

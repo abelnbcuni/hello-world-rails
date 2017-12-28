@@ -1,0 +1,28 @@
+# Local Development Database 
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: helloworld
+  pool: 5
+  username: rails_dev
+  password: "helloworld"
+  host: localhost
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+# Local Test Database 
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: helloworld_test
+  pool: 5
+  username: rails_test
+  password: "helloworld"
+  host: localhost
+
+
+# This will be the Database that connects to the MySQL Service ON PCF
+# Leaving this section blank as the application will connect to the DB using ENV VARS. (ENV['DATABASE_URL']) 
+production:
+

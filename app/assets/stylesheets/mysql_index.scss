@@ -1,0 +1,23 @@
+// CSS Grid Styling For The Mysql Index Page
+.mysql-index-site{
+    display:grid;
+    grid-template-columns: 0.15fr 1fr 2fr 1fr;
+    grid-template-rows: 1fr 0.15fr 0.5fr 0.15fr auto;
+    grid-template-areas: 
+        ". . title ."
+        ". . . ."
+        ". intro intro intro"
+        ". . . ."
+        ". tablerow tablerow .";
+}
+.mysql-index-title-row{
+    grid-area: title;
+}
+
+.mysql-index-intro-row{
+    grid-area: intro;
+}
+
+#visit-table_wrapper{
+    grid-area: tablerow;
+}

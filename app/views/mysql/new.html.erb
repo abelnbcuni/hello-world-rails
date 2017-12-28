@@ -1,0 +1,28 @@
+<h1>Visitor Logs</h1>
+
+<%= form_for @visit, url: {action: "new"}, html: {class: "mysql_form"} do |f| %>
+    <div>
+        <%= f.label(:name, "Who Are You? (Your Name Please)") %>
+        <%= f.text_field(:name) %>  
+    </div>
+   <div>
+        <%= f.label(:sso, "What's Your SSO?") %>
+        <%= f.text_field(:sso) %>
+   </div>
+    <div>
+        <%= f.label(:visit_date, "When Did You Visit?") %>
+        <%= f.date_field(:visit_date) %>
+    </div>
+    <div>
+        <%= f.label(:message, "Leave Us A Little Note") %>
+        <%= f.text_field(:message) %>
+    </div>
+    
+    <div>
+        <%= f.submit "Submit" %>
+    </div>
+<% end %>
+
+
+
+

@@ -1,0 +1,40 @@
+//The Style Sheet For the Home#Index Page
+.home-index-site{
+    display: grid;
+    grid-template-columns: 0.25fr 0.5fr 0.5fr 0.25fr; 
+    grid-template-rows: 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr ;
+    grid-template-areas: 
+        "title title title title"
+        "nbc nbc nbc ."
+        ". plus plus ."
+        "pivotal pivotal pivotal ."
+        "intro intro intro intro"
+        ". logoM logoR .";
+}
+.home-index-title-row{
+    grid-area: title;
+}
+
+.home-index-nbc-logo{
+    grid-area: nbc;
+}
+
+.home-index-plus-sign{
+    grid-area: plus;
+}
+
+.home-index-pcf-logo{
+    grid-area: pivotal;
+}
+
+.home-index-intro{
+    grid-area: intro;
+}
+
+.home-index-mysql{
+    grid-area: logoM;
+}
+
+.home-index-redis{
+    grid-area: logoR;
+}
