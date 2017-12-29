@@ -10,7 +10,13 @@
         <p class='mysql-para'>
             For More Information About MySQL In General Please Refer To: <a href='https://dev.mysql.com/doc/'>https://dev.mysql.com/doc/</a>
         </p>
-        <p class='mysql-para'>This Page Displays The Visits Stored In The DB</p>
+        <p>
+            PCF offers MySQL as a service, It is very Easy to take advantage of that in rails. You can create a MySQL service using this link:<a>Insert Link Here</a></p>
+        </p>
+        <p>Once this service is created PCF will automatically expose the DB URL in An Environment Variable "DATABASE_URL"</p>
+        <p>Rails by design will automatically connect to a DB When a DB URL is stored in Environment Variable named: "DATABASE_URL"</p>
+        <p class='mysql-para'>This Page Displays The Visits Stored In The PCF MySQL Tile DB</p>
+        <button type="button" onclick=newVisit() id="visit-button">Log A Visit</button>
     </div>
         <table class ="table-row" id='visit-table'>
             <thead>
@@ -39,4 +45,8 @@
     $(document).ready(function() {
         $('#visit-table').DataTable();
     } );
+
+    function newVisit(){
+        location.href='/mysql/new';
+    }
 </script>
